@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/cdba24a053.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="logo.jpg" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Web Developer</p>
+                    <h1>Hi, I'm <span>Subhasri V</span> from<br>
+                        Karpagam collage of Engineering<br>
+                    <span>pursuing </span>Electronics and Communication Engineering </h1>
+                </div>
+            </div>
+        </div>
+<!--  ---------------about------------------- -->
+<div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="girl3.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About<span>Me</span></h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam nihil voluptates ad, ipsam sint molestiae asperiores qui. Possimus, exercitationem quaerat, quo et deleniti unde adipisci nobis quidem magni repellat fugit autem quod reprehenderit recusandae modi illo minima ad facere debitis iure vero. Inventore adipisci assumenda neque voluptas et magnam sed ullam. Laudantium enim vitae rerum, molestiae iste temporibus fugiat soluta culpa at repellat nulla eius rem doloribus perspiciatis praesentium tenetur ut animi architecto, ea eligendi facilis libero blanditiis, quibusdam est? Nam nihil eveniet vitae? Repellat debitis totam nihil laborum quis at omnis, error similique sit quaerat optio dolorem perspiciatis praesentium aliquam quae voluptate odio eaque officia culpa atque incidunt ipsum sequi recusandae commodi. Veniam dignissimos totam fuga eos. Numquam at saepe, dignissimos, totam error quasi aut ullam quis voluptas veniam distinctio! Cupiditate ducimus, ut tempore optio vero, odit voluptatibus explicabo nihil voluptatum delectus facilis iure eligendi debitis quae sapiente officia</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+
+                            <p class="tab-links" onclick="opentab('education')"> Education</p>
+                           
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Designer</span><br>UI/UX/App interfaces</li>
+                                <li><span>Web Developement</span><br>Web App Developement</li>
+                                <li><span>App Developement</span><br>Buildfing Android/iOS apps</li>
+                            </ul>
+                        </div>
+                        
+    
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2016</span><br>UI/UX Design Training at ET Institute</li>
+                                <li><span>2016</span><br>MBA from MIT Banglore</li>
+                                <li><span>2014</span><br>BBA from ISM Banglore</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- ------------------services------------ -->
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My<span>Services</span> </h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2><span>Web</span>Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem!</p>
+                            <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop"></i>
+                        <h2><span> UI/UX </span>Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, magnam!</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store-ios"></i>
+                        <h2> <span>App</span> Design</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, quod.</p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            var tablinks= document.getElementsByClassName("tab-links");
+            var tabcontents= document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+
+            }
+        </script>
+
+    </body>
+</html>
